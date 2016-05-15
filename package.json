@@ -1,0 +1,34 @@
+{
+  "name": "venn-diagram",
+  "version": "1.0.0",
+  "description": "A venn diagram drawn by canvas",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base demo",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liushuigs/venn-diagram.git"
+  },
+  "keywords": [
+    "venn",
+    "diagram"
+  ],
+  "author": "jinlingxi@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liushuigs/venn-diagram/issues"
+  },
+  "homepage": "https://github.com/liushuigs/venn-diagram#readme",
+  "devDependencies": {
+    "babel-core": "^6.8.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "lodash": "^4.12.0"
+  }
+}
