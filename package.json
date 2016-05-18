@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --content-base demo",
-    "build": "webpack"
+    "build": "webpack --display-error-details"
   },
   "repository": {
     "type": "git",
