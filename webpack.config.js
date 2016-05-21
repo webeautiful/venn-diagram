@@ -5,7 +5,7 @@ module.exports = {
     circle: './demo/circle.js'
   },
   output: {
-    path: './demo',
+    path: './dist',
     filename: '[name].bundle.js'
   },
   module: {

@@ -4,7 +4,7 @@
   "description": "A venn diagram drawn by canvas",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --content-base demo",
+    "start": "webpack-dev-server --port 9090 --content-base demo/",
     "build": "webpack --display-error-details"
   },
   "repository": {
