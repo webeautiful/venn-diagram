@@ -53,17 +53,17 @@ function getRGBA(rgb, opacity = 1.0) {
   return ['rgba(', rgb.join(), ',', opacity, ')'].join('')
 }
 
-function isInCircle(circle, x, y) {
+function isInCircle(circle, point) {
   const x0 = circle.x
   const y0 = circle.y
   const r = circle.r
-  return Math.sqrt(Math.pow(x - x0, 2) + Math.pow(y - y0, 2)) < r
+  return Math.sqrt(Math.pow(point.x - x0, 2) + Math.pow(point.y - y0, 2)) < r
 }
 
-function detectShape(x, y, circleOne, circleTwo, circleThree) {
-  const sectionOne = isInCircle(circleOne, x, y) ? 1 : 0
-  const sectionTwo = isInCircle(circleTwo, x, y) ? 2 : 0
-  const sectionThree = isInCircle(circleThree, x, y) ? 4 : 0
+function detectShape(point, circleOne, circleTwo, circleThree) {
+  const sectionOne = isInCircle(circleOne, point) ? 1 : 0
+  const sectionTwo = isInCircle(circleTwo, point) ? 2 : 0
+  const sectionThree = isInCircle(circleThree, point) ? 4 : 0
   return sectionOne + sectionTwo + sectionThree
 }
 
