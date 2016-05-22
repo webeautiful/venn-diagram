@@ -75,7 +75,7 @@ function getMousePos(canvas, evt) {
   }
 }
 
-export {
+export default {
   getPointsDistance,
   getRadByPoint,
   getIntersectionPoints,

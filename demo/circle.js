@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import Circle from '../src/circle'
 
 const circle = new Circle({
@@ -12,11 +11,15 @@ const circle = new Circle({
     endRad: 2*Math.PI
 })
 
-$(function(){
-    //event
-    $('.select').click(function(){
-        let $this = $(this)
-        let name = $this.data('name')
-        circle.showCircle(name)
+//文件分离: https://segmentfault.com/a/1190000003985802
+require.ensure(['jquery'], require => {
+    let $ = require('jquery')
+    $(function(){
+        //event
+        $('.select').click(function(){
+            let $this = $(this)
+            let name = $this.data('name')
+            circle.showCircle(name)
+        })
     })
 })
