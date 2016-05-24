@@ -1,9 +1,9 @@
-import _ from 'lodash'
+import {extend} from 'lodash'
 import util from './util'
 
 class Circle {
     constructor(options) {
-        this.options = _.extend({
+        this.options = extend({
             domId: 'circle',
             width: 100,
             height: 100,

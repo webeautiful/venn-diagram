@@ -51,7 +51,7 @@
    draw some html content on the canvas
    align is the attribute of text-align in css
  **/
-import * as util from './util'
+import util from './util'
 import _ from 'lodash'
 
 // (x,y) is the center and r is the radius of the circle
@@ -282,7 +282,8 @@ class VennDiagram {
     const canvasPos = util.getMousePos(this.canvas, event)
     canvasPos.x -= translate.x
     canvasPos.y -= translate.y
-    const sectionId = util.detectShape(canvasPos.x, canvasPos.y, circleOne, circleTwo, circleThree)
+    const point = {x: canvasPos.x, y: canvasPos.y}  
+    const sectionId = util.detectShape(point, circleOne, circleTwo, circleThree)
     // section changed
     this._setHoveredSection(sectionId)
   }
@@ -292,7 +293,8 @@ class VennDiagram {
     const canvasPos = util.getMousePos(this.canvas, event)
     canvasPos.x -= translate.x
     canvasPos.y -= translate.y
-    const sectionId = util.detectShape(canvasPos.x, canvasPos.y, circleOne, circleTwo, circleThree)
+    const point = {x: canvasPos.x, y: canvasPos.y}  
+    const sectionId = util.detectShape(point, circleOne, circleTwo, circleThree)
     if (sectionId < 1) {
       return
     }

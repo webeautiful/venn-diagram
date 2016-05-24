@@ -75,6 +75,7 @@ function getMousePos(canvas, evt) {
   }
 }
 
+//module.exports = {
 export default {
   getPointsDistance,
   getRadByPoint,
